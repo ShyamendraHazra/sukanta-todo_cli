@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "id": "mgcoy7ll",
+      "task": "Drink more water",
+      "completed": true
+    },
+    {
+      "id": "mgcoygeh",
+      "task": "Repair Bicycle",
+      "completed": false
+    },
+    {
+      "id": "mgcoyl6t",
+      "task": "Clean PC",
+      "completed": false
+    }
+  ]
+}
