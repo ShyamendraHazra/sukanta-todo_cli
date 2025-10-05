@@ -29,7 +29,7 @@ const connDb = () => {
 
 // Add a task
 program
-    .command('add <task>')
+    .command('add <task...>')
     .description('add a task to do')
     .action((task) => {
         const db = connDb()
@@ -45,7 +45,7 @@ program
         db.data ||= { tasks: [] };
         const newTask = {
             id: Date.now().toString(36),
-            task: task,
+            task: task.join(' '),
             completed: false
         };
         db.data.tasks.push(newTask);
@@ -81,6 +81,13 @@ program
             ans ? console.log(err) : process.exit(1);
             process.exit(1);
         }
+
+        if(options.complete && options.notComplete){
+            console.error(chalk.red('Choose either --complete or --not-complete, not both'))
+            process.exitCode = 1;
+            return;
+        }
+
         const {tasks} = db.data
         const targetIndex = tasks.findIndex((task) => task.id === taskid)
 
