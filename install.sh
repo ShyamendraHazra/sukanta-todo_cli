@@ -4,6 +4,7 @@ TARGET_DIR="$HOME/.todo_cli"
 
 git clone https://github.com/su1nta/todo_cli.git $TARGET_DIR
 cd todo_cli
+pwd
 npm install
 chmod +x todo.js
 npm link
