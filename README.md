@@ -48,6 +48,11 @@ npm i @inquirer/prompts
    ```
 5. Now use it anywhere with `todocli`.
 
+#### For automated install run below command in your terminal
+```bash
+curl https://raw.githubusercontent.com/su1nta/todo_cli/master/install.sh | sh
+
+```
 To remove:
 ```bash
 npm unlink -g todo_cli
